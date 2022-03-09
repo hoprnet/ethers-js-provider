@@ -67,9 +67,9 @@ export declare class BaseProvider extends Provider implements EnsProvider {
     _fastBlockNumberPromise: Promise<number>;
     _fastQueryDate: number;
     _maxInternalBlockNumber: number;
-    _internalBlockNumber: {
+    _internalBlockNumberQuery: {
         id: number;
-        promise: Promise<void | {
+        promise: Promise<{
             blockNumber: number;
             reqTime: number;
             respTime: number;
