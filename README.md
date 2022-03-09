@@ -1,3 +1,20 @@
+Where the repo comes from:
+--------------------------
+
+Main repo: https://github.com/ethers-io/ethers.js
+
+Fork with memory leak fixes: https://github.com/robertkiel/ethers.js
+
+Creation of this repo:
+
+- Clone, and build https://github.com/robertkiel/ethers.js
+- Copy artifacts of `@ethersproject/provider` to this repo.
+
+Why?
+----
+
+Ethers.js consists of a package `ethersjs` as well as several packages `@ethersproject/*`. This repo only contains affected `@ethersproject/providers` package to allow NPM / Yarn to fetch this package.
+
 Ethereum Providers
 ==================
 
