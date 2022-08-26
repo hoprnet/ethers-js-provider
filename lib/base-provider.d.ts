@@ -9,6 +9,8 @@ export declare class Event {
     readonly listener: Listener;
     readonly once: boolean;
     readonly tag: string;
+    _lastBlockNumber: number;
+    _inflight: boolean;
     constructor(tag: string, listener: Listener, once: boolean);
     get event(): EventType;
     get type(): string;
@@ -63,6 +65,7 @@ export declare class BaseProvider extends Provider implements EnsProvider {
     _poller: NodeJS.Timer;
     _bootstrapPoll: NodeJS.Timer;
     _lastBlockNumber: number;
+    _maxFilterBlockRange: number;
     _fastBlockNumber: number;
     _fastBlockNumberPromise: Promise<number>;
     _fastQueryDate: number;
